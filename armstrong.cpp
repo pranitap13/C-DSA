@@ -1,31 +1,46 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Solution{
-    public:
-bool isArmstrong(int x){
-    int original = x;
-    int sum = 0;
-    while(x > 0){
-        int lastDigit = x % 10;
-        sum = sum+ (lastDigit*lastDigit*lastDigit);
-        x = x / 10;
-    }
-    return (original == sum);
-}
-}; 
+class Solution {
+public:
+    bool isArmstrong(int x) {
+        int original = x;
+        int numDigits = 0;
+        int sum = 0;
 
-int main(){
+        // Determine the number of digits
+        int temp = x;
+        while (temp > 0) {
+            temp /= 10;
+            numDigits++;
+        }
+
+        // Compute sum of each digit raised to the power of numDigits
+        temp = x;
+        while (temp > 0) {
+            int lastDigit = temp % 10;
+            sum += pow(lastDigit, numDigits);
+            temp /= 10;
+        }
+
+        // Check if the sum matches the original number
+        return (original == sum);
+    }
+};
+
+int main() {
     Solution solution;
     int num;
-    cout << "Enter an integer:";
+
+    cout << "Enter an integer: ";
     cin >> num;
 
-    if(solution.isArmstrong(num)){
-        cout << num << " is an Armstrong!" <<endl;
+    if (solution.isArmstrong(num)) {
+        cout << num << " is an Armstrong number!" << endl;
+    } else {
+        cout << num << " is not an Armstrong number!" << endl;
     }
-    else{
-        cout << num << " is not an Armstrong!" <<endl;
-    }
+
     return 0;
 }
+

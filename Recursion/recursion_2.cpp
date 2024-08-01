@@ -3,7 +3,8 @@ using namespace std;
 
 //print a name N times:
 
-void printName(int i, int n){/*The function printName takes two arguments: i (current count) and n (total number of times to print). 
+void printName(int i, int n){
+    /*The function printName takes two arguments: i (current count) and n (total number of times to print). 
 It prints "Pranita" and recursively calls itself, increasing the counter i each time until it exceeds n.*/
 
     if(i > n) return; /*Base Case: if (i > n) return; stops the recursion when i exceeds n.

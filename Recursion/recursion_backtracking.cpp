@@ -8,7 +8,7 @@ void printNum(int i, int n){
 
     if(i < 1) return;
     printNum(i-1, n);//The function calls itself with the argument i-1. This means it will decrement the value of i by 1 in each recursive call.
-   /*Parameter n: Here, n serves as the stopping condition to control the countdown.
+   /*Parameter n: Here, n serves as the stopping condition to control the countdown.(total/desired count )
     Parameter i: i manages the current number being printed, incrementing up to n.*/
     cout << i << " ";//After all recursive calls have returned (unwinding the recursion), it prints the current value of i
 }

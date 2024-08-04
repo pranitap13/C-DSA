@@ -27,6 +27,7 @@ int main(){
     string s;
     cout << "Enter a String:";
     cin >> s;
+    
     /*int n;
     cout << "Enter an array:";
     cin >> n;

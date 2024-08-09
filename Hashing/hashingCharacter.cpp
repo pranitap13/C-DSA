@@ -12,6 +12,7 @@ int main(){
  for(int i=0; i<str.size();i++){
     hash[str[i] - 'a']++; /* str[i] - 'a': This expression calculates the index of the character str[i] in the array.
      For example, if str[i] is 'b', then str[i] - 'a' equals 1, so it maps 'b' to index 1*/
+     //hash is an integer it autocaste itself into string an ascii value
 
      /*hash[str[i] - 'a']++: Increments the count of the letter at the calculated index. For example, if the string 
      is "hello", 
